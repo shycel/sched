@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(./BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    height: 250px;
+    display: flex;
+   flex-direction: column;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.tb {
+    margin:auto;
+    border-radius: 5px;
+    border: 2px solid aqua; 
+    background: black; 
+    color: aqua;
+    padding: 10px 20px; 
+    font-weight: bold;
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.tb:hover {
+    background-color: aqua; 
+    color: black; 
+    border: 2px solid black;
+}
+
+h1{
+    border-radius: 5px;
+    padding: 10px 20px; 
+    width: 200;
+    background-color: #1b3b4f;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 24px;
+    position: relative;
+    color: aqua;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+h1::after, h1::before{
+    border-radius: 5px;
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),aqua,blue,aqua);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    animation: 8s spin linear infinite;
+}
+
+h1::before{
+    filter:blur(1rem);
+    opacity: 1.5;
+}
+@keyframes spin {
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}

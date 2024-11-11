@@ -1,0 +1,138 @@
+.elective2 {
+    background-color: rgb(15, 133, 163);
+    color: white;
+}
+tr:hover,
+tr:hover + tr:hover,
+td.elective2:hover,
+td.elective23:hover + td.elective2
+{
+    background-color: aqua;
+}
+
+
+#saad {
+    background-color: brown;
+    color: white;
+}
+#elective1 {
+    background-color: blue;
+    color: white;
+}
+#sapi {
+    background-color: rgb(53, 21, 236);
+}
+#fl{
+    background-color: #ff0000;
+    color: white;
+}
+#wsat{
+    background-color: rgb(52, 173, 123);
+    color: white;
+}
+#ad{
+    background-color: #ff00ff;
+}
+#qm {
+    background-color: #6200ff;
+    
+}
+
+
+table,td{
+    color: #ffffff;
+    border: 1px solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+tr{
+    background-color: rgba(0, 0, 0, .6);
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+body {
+
+    background: url('../image/mbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: black;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: aqua; 
+    color: black; 
+    border: 2px solid black;
+}
+
+
+h1 {
+    width: 500;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #1b3b4f;
+    position: relative;
+    color: #ffffff;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+h1::after, h1::before{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),aqua,blue,aqua);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    animation: 8s spin linear infinite;
+}
+
+h1::before{
+    filter:blur(1rem);
+    opacity: 0.5;
+}
+@keyframes spin {
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+   
+    
+}
+
+
+
+
+
